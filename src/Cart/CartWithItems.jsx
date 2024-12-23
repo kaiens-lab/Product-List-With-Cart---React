@@ -1,5 +1,7 @@
-const carbonNeutralImage = "../public/assets/images/icon-carbon-neutral.svg";
-const removeImage = "../public/assets/images/icon-remove-item.svg";
+const carbonNeutralImage =
+  "/Product-List-With-Cart-React/assets/images/icon-carbon-neutral.svg";
+const removeImage =
+  "/Product-List-With-Cart-React/assets/images/icon-remove-item.svg";
 import { useContext } from "react";
 import { MyContext } from "../ContextProvider";
 

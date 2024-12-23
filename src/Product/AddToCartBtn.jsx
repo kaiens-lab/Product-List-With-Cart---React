@@ -1,7 +1,10 @@
 import PropTypes from "prop-types";
-const addToCartIcon = "../public/assets/images/icon-add-to-cart.svg";
-const increaseIcon = "../public/assets/images/icon-increment-quantity.svg";
-const decreaseIcon = "../public/assets/images/icon-decrement-quantity.svg";
+const addToCartIcon =
+  "/Product-List-With-Cart-React/assets/images/icon-add-to-cart.svg";
+const increaseIcon =
+  "/Product-List-With-Cart-React/assets/images/icon-increment-quantity.svg";
+const decreaseIcon =
+  "/Product-List-With-Cart-React/assets/images/icon-decrement-quantity.svg";
 
 function AddToCartBtn({ product, addToCart, updateQuantity }) {
   const { inCart, quantity } = product;

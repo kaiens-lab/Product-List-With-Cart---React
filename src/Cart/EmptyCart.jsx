@@ -1,4 +1,5 @@
-const emptyCartImage = "../public/assets/images/illustration-empty-cart.svg";
+const emptyCartImage =
+  "/Product-List-With-Cart-React/assets/images/illustration-empty-cart.svg";
 
 const EmptyCart = () => {
   return (
