@@ -170,6 +170,7 @@ body {
   border-radius: 3rem;
   margin-top: 1rem;
   text-align: center;
+  cursor: pointer;
 }
 
 .attribution {
