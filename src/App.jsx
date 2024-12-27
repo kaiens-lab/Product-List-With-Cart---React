@@ -2,10 +2,12 @@ import ProductList from "./Product/ProductList";
 import Cart from "./Cart/Cart";
 import "./App.css";
 import MyContextProvider from "./ContextProvider";
+import OrderConfirmation from "./OrderConfirmation";
 
 function App() {
   return (
     <MyContextProvider>
+      <OrderConfirmation />
       <div className="main">
         <div className="container">
           <div className="text-textPreset1 dessert">Dessert</div>

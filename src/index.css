@@ -118,6 +118,11 @@ body {
   text-align: center;
 }
 
+.cart-priceOrderSummary {
+  display: flex;
+  justify-content: space-between;
+}
+
 .removeBtn {
   border-width: 1px;
   border-radius: 100%;

@@ -17,6 +17,7 @@ function MyContextProvider({ children }) {
 
   const [products, setProducts] = useState(initialState); //product list
   const [cartItems, setCartItems] = useState([]); //items in the cart
+  const [confirmOrder, setConfirmOrder] = useState(false); //confirm Page
 
   const addToCart = (id) => {
     setProducts((prevProducts) =>
@@ -65,6 +66,9 @@ function MyContextProvider({ children }) {
         updateQuantity,
         cartItems,
         setCartItems,
+        confirmOrder,
+        setConfirmOrder,
+        initialState,
       }}
     >
       {children}

@@ -1,0 +1,62 @@
+.confirmForm {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 2rem;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding-top: 5rem;
+  height: 100vh;
+  z-index: 1;
+}
+
+.confirmSummary {
+  background-color: #fff;
+  padding: 24px;
+  border-top-right-radius: 1rem;
+  border-top-left-radius: 1rem;
+  height: auto;
+}
+
+.orderProducts {
+  display: flex;
+  flex-direction: column;
+}
+
+.productOrderSummary {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.productName {
+  display: flex;
+  justify-content: center;
+  width: 30%;
+}
+
+.priceOrderSummary {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.productName {
+  font-size: 0.75rem;
+  align-items: center;
+}
+
+.orderProducts img {
+  height: 48px;
+  width: 48px;
+}
+
+.pickedAmount,
+.pickedPrice {
+  font-size: 0.75rem;
+}
+
+.total {
+  display: flex;
+  align-items: center;
+  font-size: 0.85rem;
+}

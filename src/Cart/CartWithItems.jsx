@@ -6,11 +6,23 @@ import { useContext } from "react";
 import { MyContext } from "../ContextProvider";
 
 const CartWithItems = () => {
-  const { cartItems, setCartItems, setProducts } = useContext(MyContext);
+  const { cartItems, setCartItems, setProducts, setConfirmOrder } =
+    useContext(MyContext);
+
   const totalAmount = cartItems.reduce(
     (total, item) => total + item.quantity * item.price,
     0
   );
+
+  const submitOrder = () => {
+    setConfirmOrder((prev) => !prev);
+
+    // 自動跳轉到頁面最上方
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // 平滑滾動效果
+    });
+  };
 
   const handleRemoveItem = (id) => {
     //Adjust item quantities in the cart
@@ -48,33 +60,36 @@ const CartWithItems = () => {
     <div>
       <div>
         <div className="pickedDiv mb-4">
-          <div className="productOrderSummary">
+          <div className="cart-productOrderSummary">
             {cartItems.map((item) => (
-              <div key={item.id}>
-                <div>
-                  <p className="text-textPreset4Bold">{item.name} </p>
-                </div>
-                <div className="priceOrderSummary">
-                  <span className="pickedAmount text-Red text-textPreset4Bold mr-4">
-                    {item.quantity}x
-                  </span>
-                  <span className="pickedPrice text-Rose500 mr-2 text-textPreset4">
-                    @ ${item.price}
-                  </span>
-                  <span className="pickedPriceTotal  text-Rose500 text-textPreset4Bold">
-                    {item.quantity * item.price}
-                  </span>
-                  <div className="removeIcon">
-                    <img
-                      src={removeImage}
-                      alt="removeBtn"
-                      className="removeBtn"
-                      onClick={() => handleRemoveItem(item.id)}
-                    ></img>
+              <div key={item.id} className="cart-orderProducts p-4">
+                <p className="text-textPreset4Bold">{item.name} </p>
+
+                <div className="cart-priceOrderSummary">
+                  <div className="A">
+                    <span className=" text-Red text-textPreset4Bold mr-4">
+                      {item.quantity}x
+                    </span>
+                    <span className=" text-Rose500 mr-2 text-textPreset4">
+                      @ ${item.price.toFixed(2)}
+                    </span>
+                    <span className="  text-Rose500 text-textPreset4Bold">
+                      ${(item.quantity * item.price).toFixed(2)}
+                    </span>
+                  </div>
+                  <div className="B">
+                    <div className="removeIcon">
+                      <img
+                        src={removeImage}
+                        alt="removeBtn"
+                        className="removeBtn"
+                        onClick={() => handleRemoveItem(item.id)}
+                      ></img>
+                    </div>
                   </div>
                 </div>
 
-                <hr className="seperator  mb-4"></hr>
+                <hr className="seperator  mt-2 mb-2"></hr>
               </div>
             ))}
           </div>
@@ -85,7 +100,7 @@ const CartWithItems = () => {
             Order Total
           </p>
           <p className="orderTotalPrice text-Rose900 text-textPreset2 ">
-            {totalAmount.toFixed(2)}
+            ${totalAmount.toFixed(2)}
           </p>
         </div>
         <div className="carbonNeutral p-4 mb-4">
@@ -96,9 +111,9 @@ const CartWithItems = () => {
           ></img>
           <p>This is a carbon-neutral delivery</p>
         </div>
-        <div className="confirmBtn">Confirm Order</div>
-
-        <div></div>
+        <div className="confirmBtn" onClick={() => submitOrder()}>
+          Confirm Order
+        </div>
       </div>
     </div>
   );
