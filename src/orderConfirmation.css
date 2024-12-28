@@ -1,17 +1,16 @@
+.no-scroll {
+  overflow: hidden;
+}
+
+/*Confirmation*/
+
 .confirmForm {
   position: fixed;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
-  position: absolute;
-  top: 0rem;
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.4);
   padding-top: 5rem;
-  height: 100%;
   z-index: 1;
-}
-
-.no-scroll {
-  overflow: hidden;
 }
 
 .confirmSummary {
@@ -68,4 +67,36 @@
 
 .confirmBtn {
   cursor: pointer;
+}
+
+/*Tablet-500px width*/
+@media (min-width: 31.25rem) {
+  .confirmForm {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+  }
+
+  .no-scroll {
+    overflow: hidden;
+  }
+
+  .confirmSummary {
+    position: fixed;
+    border-radius: 0.8rem;
+    width: 80%;
+  }
+}
+
+/*Desktop-1100px width*/
+@media (min-width: 68.75rem) {
+  .confirmForm {
+    align-items: center;
+  }
+
+  .confirmSummary {
+    position: fixed;
+    border-radius: 0.8rem;
+    width: 592px;
+  }
 }

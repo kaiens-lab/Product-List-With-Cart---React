@@ -8,14 +8,15 @@ function App() {
   return (
     <MyContextProvider>
       <OrderConfirmation />
-      <div className="main">
-        <div className="container">
-          <div className="text-textPreset1 dessert">Dessert</div>
-          <div className="choices">
+
+      <div className="container">
+        <div className="product-section">
+          <div className="text-textPreset1">Dessert</div>
+          <div className="products">
             <ProductList />
           </div>
         </div>
-        <div className="cart-container">
+        <div className="cart-section">
           <Cart />
         </div>
       </div>

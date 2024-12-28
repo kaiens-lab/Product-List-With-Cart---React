@@ -40,15 +40,13 @@ const OrderConfirmation = () => {
   return (
     <div>
       {confirmOrder && (
-        <div className="confirmForm ">
+        <div className="confirmForm">
           <div className="confirmSummary">
             <img src={confirmIcon} alt="confirmIcon" className="pb-6"></img>
-            <p className="confirmHeader text-textPreset1 text-[1.5rem] pb-4">
+            <p className="text-textPreset1 text-[1.5rem] pb-4">
               Order Confirmed
             </p>
-            <p className="confirmText text-Rose500 pb-6">
-              We hope you enjoy your food!
-            </p>
+            <p className="text-Rose500 pb-6">We hope you enjoy your food!</p>
             <div className="orderProducts bg-Rose50 p-4">
               {cartItems.map((item) => (
                 <div key={item.id} className="pt-2 pb-2">
@@ -72,7 +70,7 @@ const OrderConfirmation = () => {
                   </div>
                 </div>
               ))}
-              <hr className="seperator  mt-2 mb-2"></hr>
+              <hr className="seperator mt-2 mb-2"></hr>
               <div className="orderTotal">
                 <p className="text-textPreset4 pl-2">OrderTotal</p>
                 <p className="text-textPreset2">${orderTotalAmount}</p>
