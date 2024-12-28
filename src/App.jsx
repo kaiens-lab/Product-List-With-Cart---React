@@ -2,7 +2,7 @@ import ProductList from "./Product/ProductList";
 import Cart from "./Cart/Cart";
 import "./App.css";
 import MyContextProvider from "./ContextProvider";
-import OrderConfirmation from "./OrderConfirmation";
+import OrderConfirmation from "./OrderConfirmation/OrderConfirmation";
 
 function App() {
   return (

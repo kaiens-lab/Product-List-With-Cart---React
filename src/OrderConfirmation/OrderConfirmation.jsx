@@ -2,7 +2,7 @@ import "./orderConfirmation.css";
 const confirmIcon =
   "/Product-List-With-Cart-React/assets/images/icon-order-confirmed.svg";
 import { useContext, useEffect } from "react";
-import { MyContext } from "./ContextProvider";
+import { MyContext } from "../ContextProvider";
 
 const OrderConfirmation = () => {
   const {
