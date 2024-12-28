@@ -26,13 +26,21 @@ const OrderConfirmation = () => {
   );
 
   useEffect(() => {
+    if (confirmOrder) {
+      document.body.classList.add("no-scroll");
+    } else {
+      document.body.classList.remove("no-scroll");
+    }
+  });
+
+  useEffect(() => {
     console.log("Current cart items:", cartItems);
   }, [cartItems]);
 
   return (
     <div>
       {confirmOrder && (
-        <div className="confirmForm">
+        <div className="confirmForm ">
           <div className="confirmSummary">
             <img src={confirmIcon} alt="confirmIcon" className="pb-6"></img>
             <p className="confirmHeader text-textPreset1 text-[1.5rem] pb-4">
